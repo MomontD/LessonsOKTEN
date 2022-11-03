@@ -132,7 +132,7 @@ let arr_users =
     ]
 
 for (const user_pass of arr_users)
-{
-    console.log(user_pass.password)
-}
+    {
+        console.log(user_pass.password)
+    }
 
