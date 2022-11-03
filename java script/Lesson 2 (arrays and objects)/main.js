@@ -136,3 +136,7 @@ for (const user_pass of arr_users)
         console.log(user_pass.password)
     }
 
+// arr_users[index].name or username or password
+// звернення до елементу масиву  - [] , arr[0]
+//якщо масив з обєктів - звернення через крапку -arr[0].password
+//і навпаки , якщо в обєкті масив user.info[0]o
