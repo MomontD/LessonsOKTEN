@@ -139,4 +139,8 @@ for (const user_pass of arr_users)
 // arr_users[index].name or username or password
 // звернення до елементу масиву  - [] , arr[0]
 //якщо масив з обєктів - звернення через крапку -arr[0].password
-//і навпаки , якщо в обєкті масив user.info[0]o
+//і навпаки , якщо в обєкті масив user.info[0]
+
+// length - довжина масиву  len_arr = arr.length
+//  як альтернатива append можна застосовувати length
+// arr[arr.length] додавати останній елемент масиву.
