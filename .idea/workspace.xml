@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="lesson 1">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lessons OKTEN.iml" afterDir="false" />
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="lesson 4 (loops for wjile)">
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 5(function)/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 5(function)/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson 3 (if and switch)/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 3 (if and switch)/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +32,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JavaScript&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +54,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667314369035</updated>
-      <workItem from="1667314371226" duration="4314000" />
+      <workItem from="1667314371226" duration="6755000" />
+      <workItem from="1667478692736" duration="186000" />
+      <workItem from="1667478917183" duration="9454000" />
+      <workItem from="1667571906119" duration="476000" />
+      <workItem from="1667588733148" duration="458000" />
+      <workItem from="1667814497446" duration="710000" />
+      <workItem from="1667921948998" duration="8622000" />
+      <workItem from="1667984344303" duration="350000" />
+      <workItem from="1668077162019" duration="8596000" />
+      <workItem from="1668250505636" duration="204000" />
+      <workItem from="1668430135204" duration="362000" />
+      <workItem from="1668675757561" duration="15047000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -65,7 +81,63 @@
       <option name="project" value="LOCAL" />
       <updated>1667317545696</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lesson 1">
+      <created>1667318778555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667318778555</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lesson 1">
+      <created>1667320549368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667320549368</updated>
+    </task>
+    <task id="LOCAL-00005" summary="lesson 2">
+      <created>1667486814309</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667486814309</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lesson 2 (corecting)">
+      <created>1667486898760</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667486898760</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lesson 2 (corecting)">
+      <created>1667487042480</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667487042480</updated>
+    </task>
+    <task id="LOCAL-00008" summary="lesson 2 (corecting)">
+      <created>1667493312262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667493312262</updated>
+    </task>
+    <task id="LOCAL-00009" summary="lesson 3 (if and switc)">
+      <created>1667928379559</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667928379559</updated>
+    </task>
+    <task id="LOCAL-00010" summary="lesson 4 (loops for wjile)">
+      <created>1668092334963</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668092334963</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +168,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lesson 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 1" />
+    <MESSAGE value="lesson 2" />
+    <MESSAGE value="lesson 2 (corecting)" />
+    <MESSAGE value="lesson 3 (if and switc)" />
+    <MESSAGE value="lesson 4 (loops for wjile)" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 4 (loops for wjile)" />
   </component>
 </project>
