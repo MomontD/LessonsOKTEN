@@ -152,6 +152,81 @@ function sum_elements_of_arr (arr_in)
 
 console.log(sum_elements_of_arr([1,2,3,4,5]))
 
+// - створити функцію яка заповнює масив рандомними числами
+// (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+
+{
+ let arr = [];
+ function foo() {
+     for (let i = 0; i < 10; i++) {
+         arr[i] = Math.floor(Math.random() * 100); // Math.floor округлення до цілого числв в низ (1.9 =>1)
+     }                                              // Math.random() * 100) випадкове число від 0 до 100
+     console.log(arr);
+ }
+ foo();
+}
+
+// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати
+// заборонено);
+
+{
+    function foo(...arguments) {   // arguments - містить вхідні аргументи , коли ми не знаємо скільки їх буде
+        let min = arguments[0];    // ... arguments - створює масив аргументів , але його присвоїти не можна
+        let max = arguments[0];    // використов. тільки в середині функцій для обробки даних
+        for (const item of arguments) {
+            if (item > max) {
+                max = item;
+            }
+            if (item < min) {
+                min = item;
+            }
+        }
+        console.log(max);
+        return min;
+    }
+
+    let foo1 = foo(1, 2, 3, 4, 5, 6, 7);
+    console.log(foo1);
+}
+
+// - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+{
+    const arr = [1, 2, 3];
+
+    function foo(array) {
+        let newArray = [];
+        for (let i = array.length - 1, j = 0; i >= 0;) {
+            newArray[j++] = array[i--];
+        }
+        return newArray;
+    }
+}
+ console.log(foo(arr));
+
+// - створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий
+// результуючий масив.
+//     EXAMPLE:
+// [1,2,3,4]
+//     [2,3,4,5]
+// результат
+//     [3,5,7,9]
+
+{
+    const arr1 = [1, 2, 3, 4];
+    const arr2 = [1, 2, 3, 4, 5];
+
+    function foo(array1, array2) {
+        let res = [];
+        let xxx = array1.length >= array2.length ? array1 : array2;
+        for (let i = 0; i < xxx.length; i++) {
+            res[i] = (array1[i] || 0) + (array2[i] || 0);
+        }
+        return res;
+    }
+
+    console.log(foo(arr1, arr2));
+}
+
 
 //-   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
@@ -204,3 +279,45 @@ sorted_arr([1,0,2,3,0,4,0,5,0])
 //   EXAMPLE:
 //   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
 // vxcvxc
+
+{
+    const arr = [
+        {name: 'Dima', age: 13},
+        {model: 'Camry'}
+    ]
+
+    function foo(array) {
+        let newArray = [];
+        for (let i = 0, j = 0; i < array.length; i++) {
+            for (const key in array[i]) {  // або функція Object.keys - витягує ключі з обєкта - за гугли
+                newArray[j++] = key;
+            }
+        }
+        return newArray;
+    }
+
+    console.log(foo(arr));
+}
+
+//     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
+// EXAMPLE:
+//     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
+{
+    const arr = [
+        {name: 'Dima', age: 13},
+        {model: 'Camry'}
+    ]
+
+    function foo(array) {
+        let newArray = [];
+        for (let i = 0, j = 0; i < array.length; i++) {
+            for (const key in array[i]) {
+                newArray[j++] = array[i][key];
+            }
+        }
+        return newArray;
+    }
+
+    console.log(foo(arr));
+}
