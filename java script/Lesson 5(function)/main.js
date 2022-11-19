@@ -321,3 +321,12 @@ sorted_arr([1,0,2,3,0,4,0,5,0])
 
     console.log(foo(arr));
 }
+
+// function chenger(arr, i) {
+//
+//         [arr[0], arr[2]] = [arr[2], arr[0]]; ///!!!!!!!!! Якщо з масивом , потрібно огорнути в масив
+//
+//     return arr;
+// }
+//
+// console.log(chenger(arr, 0));
