@@ -131,56 +131,51 @@ upper_string("Vasya petya kolya")
 
 function valid_mail (mail_in)
     {
+        // Оголошуємо додаткову функцію comparison(порівняння) - порівнюємо символи мейлу на валідність
+        // з таблицею ascii(a..z,A..Z,0..9). Бере на вхід мейл та індекс(з циклу) повертає true якщо символ НЕ валідний
+        // Таких порівнянь є декілька :
+        // 1. до символу @ ,
+        // 2. від @ до "." ,
+        // 3. від "." до кінця мейлу.
+        // Щоб не об'ємити код - вивів в окрему ф-ю
+        let comparison = (compr_email,i) =>
+                (compr_email.charCodeAt(i) >= 0 && compr_email.charCodeAt(i) < 48) ||
+                (compr_email.charCodeAt(i) >= 58 && compr_email.charCodeAt(i) <= 64) ||
+                (compr_email.charCodeAt(i) > 90 && compr_email.charCodeAt(i) < 97) ||
+                (compr_email.charCodeAt(i) > 122)
         // Крок 1-ий , шукаємо @ , якщо знаходимо рухаємось до кроку 2
         let index = mail_in.indexOf("@")
         if (index !== -1)
-                // крок 2 , перевіряємо валідацiю символів(a..z,A..Z,0..9) до @
+        // крок 2 , перевіряємо валідацiю символів до @
             {
                 for (let i = 0;  i < index; i++)
                     {
-                        if ((mail_in.charCodeAt(i) >= 0 && mail_in.charCodeAt(i) < 48) ||
-                            (mail_in.charCodeAt(i) >= 58 && mail_in.charCodeAt(i) <= 64) ||
-                            (mail_in.charCodeAt(i) > 90 && mail_in.charCodeAt(i) < 97) ||
-                            (mail_in.charCodeAt(i) > 122) )
-                                {
-                                    return "invalid mail"
-                                }
+                        if (comparison(mail_in,i)) return "Invalid Email"
                     }
-                // крок 3 перевіряємо валідацію після @ + знаходження крапки "point" (яка має знаходитись не меньше ніж
-                // на 2 символ після равлика)
-
+                // крок 3 перевіряємо валідацію символів після @ + знаходження крапки "point" (яка має знаходитись не
+                // меньше ніж на 2 символ після равлика)
                 let point =  mail_in.substring(index+1,mail_in.length).indexOf(".")
                 if (point >=  1)
                     {
+                        // Перевизначаємо point - на реальний індекс символа "."в емейлі і фіксуємо його
                         point = mail_in.indexOf(".")
+                        // Проходимось по символам від @ до point "."
                         for (let i = index + 1; i < point; i++)
                             {
-                                if ((mail_in.charCodeAt(i) >= 0 && mail_in.charCodeAt(i) < 48) ||
-                                    (mail_in.charCodeAt(i) >= 58 && mail_in.charCodeAt(i) <= 64) ||
-                                    (mail_in.charCodeAt(i) > 90 && mail_in.charCodeAt(i) < 97) ||
-                                    (mail_in.charCodeAt(i) > 122))
-                                        {
-                                            return "invalid mail"
-                                        }
+                                if (comparison(mail_in,i)) return "Invalid Email"
                             }
+                        // Проходимось по символам point "." до кінця стрічки
                         for (let i = point + 1; i < mail_in.length ; i++)
-                        {
-                            if ((mail_in.charCodeAt(i) >= 0 && mail_in.charCodeAt(i) < 48) ||
-                                (mail_in.charCodeAt(i) >= 58 && mail_in.charCodeAt(i) <= 64) ||
-                                (mail_in.charCodeAt(i) > 90 && mail_in.charCodeAt(i) < 97) ||
-                                (mail_in.charCodeAt(i) > 122))
                             {
-                                return "invalid mail"
+                                if (comparison(mail_in,i)) return "Invalid Email"
                             }
-                        }
                     }
                 else return "invalid mail"
             }
         else return "invalid mail"
         return "mail passed validation"
     }
-
-console.log(valid_mail("Momontd@gmail.com"));
+console.log(valid_mail("some.email@gmail.com"));
 
 
 
