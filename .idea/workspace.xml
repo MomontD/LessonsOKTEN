@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="lesson 6 (methods array ,function,obj + VIEVS &amp; Examples)">
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/additional/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/additional/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/notations" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,6 +73,12 @@
       <workItem from="1669302329470" duration="700000" />
       <workItem from="1669303112354" duration="14734000" />
       <workItem from="1669364526993" duration="4174000" />
+      <workItem from="1669659340154" duration="2540000" />
+      <workItem from="1669726899016" duration="2378000" />
+      <workItem from="1669729477469" duration="3830000" />
+      <workItem from="1669754556607" duration="5935000" />
+      <workItem from="1669794117172" duration="11600000" />
+      <workItem from="1669834110033" duration="7694000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>

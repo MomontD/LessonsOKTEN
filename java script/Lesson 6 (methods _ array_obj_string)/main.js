@@ -36,6 +36,13 @@
 
     in_mass.map((element) => new_mass.push(String(element)))
     console.log(new_mass)
+// АБО
+    // let strings = arr.map(value => value.toString());
+    // let strings = arr.map(value => String(value));
+    // let strings = arr.map(value => value + '');
+
+
+
 }
 
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
@@ -167,6 +174,9 @@
             if (element.cardSuit === "clubs" && (+element.value === 9 || +element.value === 10 ||
                     element.value === "jack" || element.value === "qeen" || element.value === "king" ||
                     element.value === "ace") )
+            //АБО
+                //// let filter = deck.filter(value =>(value.cardSuit === 'clubs' && value.value >= 9) ||
+                // //     (value.cardSuit === 'clubs' && typeof value.value === 'string'));
                 {
                     console.log(element)
                 }
