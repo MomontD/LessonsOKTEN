@@ -144,27 +144,27 @@ function valid_mail (mail_in)
                 (compr_email.charCodeAt(i) > 90 && compr_email.charCodeAt(i) < 97) ||
                 (compr_email.charCodeAt(i) > 122)
         // Крок 1-ий , шукаємо @ , якщо знаходимо рухаємось до кроку 2
-        let index = mail_in.indexOf("@")
-        if (index !== -1)
+        let index_snail = mail_in.indexOf("@")
+        if (index_snail !== -1)
         // крок 2 , перевіряємо валідацiю символів до @
             {
-                for (let i = 0;  i < index; i++)
+                for (let i = 0;  i < index_snail; i++)
                     {
                         if (comparison(mail_in,i)) return "Invalid Email"
                     }
                 // крок 3 перевіряємо валідацію символів після @ + знаходження крапки "point" (яка має знаходитись не
                 // меньше ніж на 2 символ після равлика)
-                let point =  mail_in.substring(index+1,mail_in.length).indexOf(".")
+                let point =  mail_in.substring(index_snail + 1, mail_in.length).indexOf(".")
                 if (point >=  1)
                     {
                         // Перевизначаємо point - на реальний індекс символа "."в емейлі і фіксуємо його
                         point = mail_in.indexOf(".")
                         // Проходимось по символам від @ до point "."
-                        for (let i = index + 1; i < point; i++)
+                        for (let i = index_snail + 1; i < point; i++)
                             {
                                 if (comparison(mail_in,i)) return "Invalid Email"
                             }
-                        // Проходимось по символам point "." до кінця стрічки
+                        // Проходимось по символам від point "." до кінця мейлу
                         for (let i = point + 1; i < mail_in.length ; i++)
                             {
                                 if (comparison(mail_in,i)) return "Invalid Email"
@@ -175,7 +175,7 @@ function valid_mail (mail_in)
         else return "invalid mail"
         return "mail passed validation"
     }
-console.log(valid_mail("some.email@gmail.com"));
+console.log(valid_mail("someemail@gmail.com"));
 
 
 
@@ -186,88 +186,111 @@ console.log(valid_mail("some.email@gmail.com"));
 
 
 
-// - є масивlet coursesArray = [
-//              {
-//                  title: 'JavaScript Complex',
-//                  monthDuration: 5,
-//                  hourDuration: 909,
-//                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-//              },
-//              {
-//                  title: 'Java Complex',
-//                  monthDuration: 6,
-//                  hourDuration: 909,
-//                  modules: ['html',
-//                      'css',
-//                      'js',
-//                      'mysql',
-//                      'mongodb',
-//                      'angular',
-//                      'aws',
-//                      'docker',
-//                      'git',
-//                      'java core',
-//                      'java advanced']
-//              },
-//              {
-//                  title: 'Python Complex',
-//                  monthDuration: 6,
-//                  hourDuration: 909,
-//                  modules: ['html',
-//                      'css',
-//                      'js',
-//                      'mysql',
-//                      'mongodb',
-//                      'angular',
-//                      'aws',
-//                      'docker',
-//                      'python core',
-//                      'python advanced']
-//              },
-//              {
-//                  title: 'QA Complex',
-//                  monthDuration: 4,
-//                  hourDuration: 909,
-//                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-//              },
-//              {
-//                  title: 'FullStack',
-//                  monthDuration: 7,
-//                  hourDuration: 909,
-//                  modules: ['html',
-//                      'css',
-//                      'js',
-//                      'mysql',
-//                      'mongodb',
-//                      'react',
-//                      'angular',
-//                      'aws',
-//                      'docker',
-//                      'git',
-//                      'node.js',
-//                      'python',
-//                      'java']
-//              },
-//              {
-//                  title: 'Frontend',
-//                  monthDuration: 4,
-//                  hourDuration: 909,
-//                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-//              }
-//          ];
-//
-//
+// - є масив
+
+let coursesArray = [
+              {
+                  title: 'JavaScript Complex',
+                  monthDuration: 5,
+                  hourDuration: 909,
+                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+              },
+              {
+                  title: 'Java Complex',
+                  monthDuration: 6,
+                  hourDuration: 909,
+                  modules: ['html',
+                      'css',
+                      'js',
+                      'mysql',
+                      'mongodb',
+                      'angular',
+                      'aws',
+                      'docker',
+                      'git',
+                      'java core',
+                      'java advanced']
+              },
+              {
+                  title: 'Python Complex',
+                  monthDuration: 6,
+                  hourDuration: 909,
+                  modules: ['html',
+                      'css',
+                      'js',
+                      'mysql',
+                      'mongodb',
+                      'angular',
+                      'aws',
+                      'docker',
+                      'python core',
+                      'python advanced']
+              },
+              {
+                  title: 'QA Complex',
+                  monthDuration: 4,
+                  hourDuration: 909,
+                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+              },
+              {
+                  title: 'FullStack',
+                  monthDuration: 7,
+                  hourDuration: 909,
+                  modules: ['html',
+                      'css',
+                      'js',
+                      'mysql',
+                      'mongodb',
+                      'react',
+                      'angular',
+                      'aws',
+                      'docker',
+                      'git',
+                      'node.js',
+                      'python',
+                      'java']
+              },
+              {
+                  title: 'Frontend',
+                  monthDuration: 4,
+                  hourDuration: 909,
+                  modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+              }
+          ]
+
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
-//
+
+console.log(coursesArray.sort((element1, element2) => element2.modules.length - element1.modules.length));
+
 // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
+
+ let count = (str, stringsearch) => stringsearch < str.length ? str.substring(0,stringsearch) : "the number of" +
+     " characters is longer than the string"
+console.log(count("Hello world", 10));
+
 // let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
-//
+
+function find_symb (str,symb)
+    {
+        let calc=0
+        for (let i = 0; i < str.length; i++)
+            {
+                if (str[i] === symb) calc++
+            }
+        return calc
+    }
+console.log(find_symb("Астрономия это наука о небесных объектах", "о"));
+
+
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 // let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
-//
-//
+{
+    let cutString = (str, n) => str.split(" ").splice(0, 5).join(" ")
+
+    console.log(cutString("Сила тяжести приложена к центру масс тела", 5));
+}
 // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 // -знайти наібльшу книжку.
 // - знайти книжку/ки з найбільшою кількістю жанрів
