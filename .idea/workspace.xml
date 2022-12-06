@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="lesson 6 (additional optimized)">
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="lesson 6 (additional, optimized , finish)">
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 7 (try_catch,throw)/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 7 (try_catch,throw)/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 7 (try_catch,throw)/notations" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/additional/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/additional/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/notations" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,12 @@
       <workItem from="1669754556607" duration="5935000" />
       <workItem from="1669794117172" duration="11600000" />
       <workItem from="1669834110033" duration="11872000" />
-      <workItem from="1669905025159" duration="3712000" />
+      <workItem from="1669905025159" duration="5010000" />
+      <workItem from="1669919759818" duration="3901000" />
+      <workItem from="1670063541605" duration="1650000" />
+      <workItem from="1670065300264" duration="2503000" />
+      <workItem from="1670143896758" duration="4372000" />
+      <workItem from="1670275542455" duration="1528000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -205,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669846013807</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="lesson 6 (additional, optimized , finish)">
+      <created>1669909287696</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669909287696</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +261,7 @@
     <MESSAGE value="lesson 6 (methods array ,function,obj + VIEVS &amp; Examples)" />
     <MESSAGE value="lesson 6 (additional)" />
     <MESSAGE value="lesson 6 (additional optimized)" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 6 (additional optimized)" />
+    <MESSAGE value="lesson 6 (additional, optimized , finish)" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 6 (additional, optimized , finish)" />
   </component>
 </project>
