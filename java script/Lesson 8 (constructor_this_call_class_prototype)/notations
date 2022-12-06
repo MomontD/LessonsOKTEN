@@ -1,0 +1,106 @@
+// Функція конструктор
+
+    Створює обєкт за заданою структурою.
+    На вхід - аргументи , за допомогою яких ми створюємо новий обєкт
+
+    function User(name, age, skills, wife)
+    {
+        this.name = name;
+        this.age = age;
+        this.skills = skills;
+        this.wife = wife;
+        this.greeting = function (msg)
+            {
+                return `${msg} my name is ${this.name}`
+            }
+    }
+    let user1 = new User("vasya", 31, ["js","html"], {name: 'anna', age: 123})
+    console.log(user1);
+    console.log(user1.greeting("Hello")); //=> Hello my name is vasya
+    *** greeting повертає повідомлення з msg та імям нового обєкту
+
+// call,  apply -підміна
+
+    let friend =
+        {
+            name: 'anton',
+            age : 31,
+            married : false
+        }
+    console.log(user1.greeting.call(friend, 'YO'));
+    Було
+    Hello my name is vasya
+    Стало
+    YO my name is anton
+    call - приймає аргументи через кому call(friend, 'YO' ,"asd"  і т.д.)
+    -----
+    Те саме через apply
+    console.log(user1.greeting.apply(friend, ["YO"]));
+    *** приймає аргументи ф-ї через масив , от і вся різниця з call
+        apply(friend, ["YO","asd",  і т.д.]
+
+// bind() - копіює ф-ю з обєкту
+    let greetingCopy = user1.greeting.bind(friend);
+    greetingCopy('HELLO !!!');
+    *** ми створили копію функції greeting з обєкту user1
+
+// prototype - можна створити функцію яка буде виконувати певні дії і мати відношення до
+               конкретного прототипу (виду , типу - array,string,obj)
+
+   Array.prototype.printSelf = function ()
+        {
+           console.log(this); // this це звернення до поточного масиву, обєкту
+        };
+       let numbers = [11, 22, 33];
+       numbers.printSelf();
+
+// class , constructor - те саме що функція коструктор (створює обєкт за певною структурою) , але
+                         має можливість окремо(окрім обєкта) описувати додаткові функції та код.
+    class UserPuser
+        {
+        constructor(name, age) // створення нового обєкту, constructor -  службове слово
+            {
+                this.name = name
+                this.age = age
+            }
+        greeting() // створення функції , окремо від обєкту
+            {
+                console.log(`hello my name is ${this.name}`)
+            }
+        }
+    console.log(new UserPuser("Dima", 31)); // ***!!! new - службове слово , без нього class неспрацює!!!
+    // =>
+    // UserPuser {name: 'Dima', age: 31}
+    // age: 31
+    // name: "Dima"
+    console.log(new UserPuser("Dima", 31).greeting());
+    // =>
+    // hello my name is Dima
+    // undefined
+
+// class, extends - Наслідування. Новий обєкт наслідує всі дані з вхідного
+
+    class SuperUser extends UserPuser   //  SuperUser наслідував обєкт UserPuser
+        {                              // ключовий оператор наслідування extends
+        }
+    console.log(new SuperUser)
+
+    ----Наслідування з обєкту
+    class nextUser extends oldPuser
+        {
+            constructor(name, age, skills)
+                {
+                    super(name, age);
+                    this.skills = skills;
+                }
+
+        }
+        let nextUser = new nextUser('vasya', 31, [11, 22, 33]);
+        nextUser.greeting();
+
+    ***  constructor => super(name, age) - newUserнаслідує поля name,age  по шаблону з oldPuser
+                        але заміняє їх значеннями з аргументів constructor(name, age, skills) =>
+                        new oldUser('vasya', 31, [11, 22, 33]). Також наслідує ф-ю greeting()
+                        this.skills = skills - додаємо вручну бо їх в попередньому обєкті не було.
+
+
