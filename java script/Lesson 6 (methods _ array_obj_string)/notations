@@ -272,3 +272,27 @@ console.log(users2.sort(function (user1, user2)
               return JSON.parse(JSON.stringify(obj));
           }
       const copy = (obj) => JSON.parse(JSON.stringify(obj));
+
+      ЦИКЛИ З ОБЄКТАМИ !!!
+      let users = [
+              {name: 'vasya', age: 31, status: false},
+              {name: 'petya', age: 30, status: true},
+              {name: 'kolya', age: 29, status: true},
+              {name: 'olya', age: 28, status: false},
+              {name: 'max', age: 30, status: true},
+              {name: 'anya', age: 31, status: false},
+              {name: 'oleg', age: 28, status: false},
+              {name: 'andrey', age: 29, status: true},
+              {name: 'masha', age: 30, status: true},
+              {name: 'olya', age: 31, status: false},
+              {name: 'max', age: 31, status: true}
+                      ]
+          for (const element in users) // В обєктах використовуємо ператор "in" users
+              {
+                  if (element.status)
+                      {
+                          console.log(element) // виводимо ключі обєкту name,age,status
+                          console.log(users[element]) // виводимо значення ключів 'vasya', 31 , false
+                          console.log(element , users[element]) // виводимо ключ + значення
+                      }
+              }
