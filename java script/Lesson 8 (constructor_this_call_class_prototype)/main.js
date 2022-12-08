@@ -170,6 +170,6 @@ for (let i = 0; i < data_base_Cinderela.names.length; i++)
     }
 console.log(arrayOfCinderelas);
 
-arrayOfCinderelas.forEach((Cinderela) => Cinderela.footSize === prince.shoe ? console.log(Cinderela) : false));
+arrayOfCinderelas.forEach((Cinderela) => Cinderela.footSize === prince.shoe ? console.log(Cinderela) : false);
 
 console.log(arrayOfCinderelas.find((Cinderela) => Cinderela.footSize === prince.shoe ? Cinderela : false));
