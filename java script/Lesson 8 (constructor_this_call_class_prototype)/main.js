@@ -140,3 +140,36 @@ myCar.addDriver({name: "Dmytro", age: 38, drivingExperience: 14})
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 // Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+class Cinderela
+    {
+        constructor(name, age, footSize)
+            {
+                this.name = name
+                this.age = age
+                this.footSize = footSize
+            }
+    }
+let data_base_Cinderela=
+    {
+        names : ["Olya", "Diana", "Nastya", "Lilya", "Katya", "Maryana", "Ira", "Yana", "Yulya", "Orusya"],
+        ages : [22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+        footSizes : [35, 35.5, 36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5]
+    }
+let arrayOfCinderelas= []
+let prince = {name: "Vasya", age: 56, shoe: 38}
+
+for (let i = 0; i < data_base_Cinderela.names.length; i++)
+    {
+        arrayOfCinderelas.push(new Cinderela
+            (
+                data_base_Cinderela.names[i],
+                data_base_Cinderela.ages[i],
+                data_base_Cinderela.footSizes[i])
+            )
+    }
+console.log(arrayOfCinderelas);
+
+arrayOfCinderelas.forEach((Cinderela) => Cinderela.footSize === prince.shoe ? console.log(Cinderela) : false));
+
+console.log(arrayOfCinderelas.find((Cinderela) => Cinderela.footSize === prince.shoe ? Cinderela : false));

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="constructor_this_call_class_prototype">
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="add notations (methods_aaray_obj_string)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 6 (methods _ array_obj_string)/notations" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/notations" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,8 @@
       <workItem from="1670345430653" duration="88000" />
       <workItem from="1670357083600" duration="4914000" />
       <workItem from="1670362063593" duration="77000" />
-      <workItem from="1670431031548" duration="7664000" />
+      <workItem from="1670431031548" duration="7804000" />
+      <workItem from="1670505897062" duration="5206000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -246,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670342385822</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="constructor_this_call_class_prototype">
+      <created>1670446779057</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670446779057</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add notations (methods_aaray_obj_string)">
+      <created>1670446858057</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670446858057</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +304,7 @@
     <MESSAGE value="lesson 7 (try_catch,throw)" />
     <MESSAGE value="Lesson 6 (methods _ array_obj_string_OVERVIEWS)" />
     <MESSAGE value="constructor_this_call_class_prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="constructor_this_call_class_prototype" />
+    <MESSAGE value="add notations (methods_aaray_obj_string)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add notations (methods_aaray_obj_string)" />
   </component>
 </project>
