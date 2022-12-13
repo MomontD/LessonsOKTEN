@@ -1,0 +1,240 @@
+// DOM - Document object Mode
+         Обєктна модель документу - html,xml,xhtml
+         Відображає обєкти документу - head , body , script s т.д.
+
+   document - виклик DOM
+   console.log(document) - виведе струтуру з обєктами html файлу
+   *** !Викликається в розділі script  або з приєднаного файлу js
+
+   console.log(document.head.innerHTML) :
+        1. document.head - виведе розділ head зі значеннями
+        2. innerHTML - виведе тільки значення в head
+
+        АНАЛОГІЧНО з іншими - body  і т.д.
+
+   console.log(document.head.children) - виведе ПСЕВДО МАСИВ
+   ПСЕВДО МАСИВ - це відображення структури за типом масив, ніякі методи по роботі
+   з стандартним масивом не працюють.
+   ПСЕВДО МАСИВ (перетворення в масив) - https://habr.com/ru/post/336136/
+
+   <ul class="menu" id="list-2">
+       <li>item 2 1</li>
+       <li>item 2 2</li>
+       <li>item 2 3</li>
+       <li>item 2 4</li>
+       <li>item 2 5</li>
+   </ul>
+   let liList = document.getElementsByTagName('li');
+   for (const li of liList)
+        {
+            console.log(li)  - виведе всі теги li знайдені у псевдомасиві lilist
+            li.innerHTML - виведе вміст li (текстовий рядок який відображається на сайті)
+            li.innerHTML = "Hello world" - присвоєння нового значення li (тексту)
+            li.innerHTML = '<b>hello</b>' - виведе значення li жирним шрифтом
+                                            для виду HTML - можна застосовувати різні теги
+            li.innerText = "Hello world" - міняє тільки текст , теги застосовувати не можна
+            -----------------------
+            let text = li.innerText - присвоюємо текст окремі змінній text
+            text = '<b>' + text + '</b>' - конкатенуємо її з іншими тегами , змінними і т.д.
+            ------------------------
+            let text = li.innerText;
+            text = `<b>${text}</b>` !!! - `` - alt+enter - інжект ленгвідж ор - html
+            li.innerHTML = text;          `` - над кнопкою таб там де буква е
+            ------------------------
+            li.style.background = 'silver' - застилізує елемент li в срібний колір
+                                             записує стиль в тегу <li style=silver ...>
+            li.classList.add('xxx'); - додає клас до тегу <li class=xxx ... >
+            li.classList.add('yyy'); - те саме <li class=xxx yyy ...>
+            li.classList.remove('xxx') - видаляє клас з тегу <li class=yyy ...>
+        }
+
+
+   Пошук елементів -
+   По id
+   Ідентифікатор id вказується у тегах <ul class="menu" id="list-1">
+   document.getElementById("list-1") - виведе структуру елементу з ID list-1
+   --------------
+   elementList1 = document.getElementById("list-1")
+   elementList1.children - виведе у ПСЕВДО масив складники
+   --------------
+   *** *.getElementById - працює по принципу ф-ї find(). Знаходить "перше входження" , тобто
+                          перший ідентифікатор який знайде , якщо їх є декілька - проблема))
+   Інші методи :
+   document.getElementsByName() - по атрибуту name!
+   document.getElementsByClassName() - по класу"class"  <ul class="menu" id="list-1">
+   document.getElementsByTagName() - по тегу "ul" <ul class="menu" id="list-1">
+   *** elements - означає що буде виводити всі найдені елементи
+   *** ДАНИЙ ВИД ПОШУКУ БУДЕ МАТИ ЛІНКИ НА ЕЛМЕНТИ ЯКІ БУДУТЬ ВІДОБРАЖАТИ ПОТОЧНИЙ ЇХ СТАН
+       (РАПТОМ ВОНИ БУДУТЬ ЗМІНЮВАТИСЬ І БУДЕ ВІДОБРАЖАТИСЬ АКТУАЛЬНА ІНФОРМАЦІЯ)
+
+   Пошук елементів по селекторах
+   *** Селектор - це мітка для css до якої будуть застосовуватись вказані стилі. до тих елементів
+                  де вона вказана
+       .menu - МІТКА
+            background : silver
+
+       ul class="menu" id="list-1">
+           <li>item 1 1</li>
+
+       let element = document.querySelector('.menu'); -  знаходить перший елемент з меню
+       let menus = document.querySelectorAll('.menu'); - знаходить всі елементи з меню
+   *** ДАНИЙ ВИД ПОШУКУ БУДЕ МАТИ SNAPSHOT. ЗАПАМЯТОВУЄТЬСЯ ПОТОЧНИЙ СТАН. ЯКЩО БУДА ЗМІНА ВОНА НЕ ВІДОБРАЗИТЬСЯ!
+
+// Form - Форми. Створення форм , полів в HTML документі. Прописуються в тезі <body> тегом <form>
+          Мають багато різних видів - форма для вводу , тексту , мейлу , дати , паролю і т.д.
+          Конкретний вид визначається тегом <input type="email">.
+          Всі види описані через ctr+space (коли стати  в тезі type="ctr+space")
+          <body>
+          <form >
+              <input type="color">
+              <input type="checkbox">
+              <input type="date">
+              <input type="datetime-local">
+              <input type="email">
+              <input type="password">
+          </form>
+          </body>
+          ----------------------------
+          <form name="f1"> -       можемо потім шукати йю форму за name =>document.getElementsByName("f1")
+              <input type="text" name="username">  імя юзера
+              <input type="text" name="email">     мейл
+              <input type="number" min="1" max="121" name="age">   вік , параметр від 1 до 121 року
+              <input type="color">
+
+              <button>send</button> - кнопка надсилання даних
+          </form>
+          --------------------------------
+          !!! *** після нажимання кнопки "send"  , введені данідодаються до html стрічки і передаються серверу.
+          Після index.html :
+          http://localhost:63342/Lessons%20OKTEN/java%20script/Lesson%209%20(DOM_Forms)/index
+          .html?username=Dmytro&email=momontd%40gmail.com&age=38
+
+  ------- РОБОТА З ФОРМАМИ :
+
+    document.forms - повертає масив всіх форм
+    let forms = document.forms;
+        console.log(forms);
+
+    ПОШУК форми за індетифікатором -id або name
+    <form name="f1">
+        <input type="text" name="username">
+
+        <button>send</button>
+    </form>
+    <form id="f2">
+            <input type="text" name="username">
+
+            <button>send</button>
+        </form>
+
+    console.log(document.forms.f1) - за name
+    console.log(document.forms.f2) - за id
+
+   ПОШУК атрибутів форми
+   </form>
+    <form id="f2">
+        <input type="text" name="name" value="somem name">
+        <input type="text" name="surname" value="some surname">
+        <input type="number" min="1" max="121" name="vik" value="31">
+        <button>send</button>
+    </form>
+    let f2 = document.forms.f2;
+    console.log(f2.children) - з чого складається форма
+    console.log(f2.name.value)       значення , якщо вони введені через форму або вказані в тезі input
+    console.log(f2.surname.value)    значення , якщо вони введені через форму або вказані в тезі input
+    console.log(typeof f2.vik.value) значення , якщо вони введені через форму або вказані в тезі input
+
+    Приклад пошуку значень "name" у формі : ( можна використовувати для інших значень)
+    let children = f2.children;
+        for (const child of children) {
+            let attribute = child.getAttribute("name");
+            if (attribute != null && attribute != '') {
+                console.log(attribute);
+            }
+        }
+
+// Динамічна робота з HTML
+
+   Створення тегів
+        let div = document.createElement('div');
+        div.innerText = 'ashudfhsagfdhg';
+        *** створить тег <div> "ashudfhsagfdhg" </div>
+        div.setAttribute('qqq', 'qwe') - створить атрибут в тегу <div> => <div qqq="qwe"> "ashudfhsagfdhg" </div>
+        *** атрибут це додаткові парметри тегу - class,id, background  і т.д.
+
+        let users = [
+                {name: 'vasya', age: 31, status: false}
+                    ]
+
+        <ul class="users"></ul>
+
+        let usersBlockList = document.getElementsByClassName('users'); - находимо за класом users <ul>
+            let usersBlock1 = usersBlockList[0]; - присвоюємо перший елемент з псевдомасиву
+
+            for (const user of users) -  запускаємо цикл для кожного елементу масиву users
+                {
+                    let li = document.createElement('li'); - створюємо тег <li>
+                    li.innerText = `${user.name} ${user.age} ${user.status}`; наповнюємо тег <li>
+                    li.classList.add('uStyle'); додаємо стиль в тег <li>
+                    usersBlock1.appendChild(li) - додаємо <li> в <ul>
+                }
+
+   Додавання тегів в існуючий тег
+        let pList = document.getElementsByTagName('p') - знайде тег <p>
+        let p = pList[0]; - присвоюємо значення [0] з псевдомасиву (якзо декілька <p> ми беремо перший)
+        console.log(p)
+        p.appendChild(div) - додаємо <div> в <p> => , <p> <div> </div> <p>
+
+   Додавання існуючого тегу в новий(створений) тег
+
+        let h1 = document.getElementsByTagName('h1')[0]; - находимо тег <h1>
+        document.body.insertBefore(p, h1); - обгорнули існуючий <h1> в <p>
+
+// Події (events) - подія визначається ключовим словом -on-.
+                    document.body.onclick
+                    document.body.onmousemove
+                    *** є багато різних параметрів.
+
+    При використанні методу з on - це функція , може приймати аргумент який відображає всі доступні параментри для
+                                   конкретного методу.
+
+    document.body.onmousemove = function (e)
+        {
+        console.log(e)   // Відобразить всі доступні параметри
+        console.log(e.pageX , e.pageY) // через крапку e.pageX - можна задавати дод. методи ctr+space
+        document.body.style.background = `rgb(${e.pageX},${e.pageY},${e.pageY})` - змінюємо колір <body> за рахунок
+        координати миші які передаються на атрибут rgb
+        };
+
+    Приклад 2 (в циклі)
+    for (const user of users) -  запускаємо цикл для кожного елементу масиву users
+        {
+            let li = document.createElement('li'); - створюємо тег <li>
+            li.innerText = `${user.name} ${user.age} ${user.status}`; наповнюємо тег <li>
+            li.classList.add('uStyle'); додаємо стиль в тег <li>
+            li.onclick = function (e) - збільшуємо текст в <li> натиснувши на нього мишкою
+                            {
+                                let text = li.innerHTML; //** якщо застосувати innerText то збільшення буде тільки при 1
+                                                              нажиманні мишкою , а так при кожному.
+                                li.innerHTML = `<big>${text}</big>`
+                            }
+            usersBlock1.appendChild(li) - додаємо <li> в <ul>
+        }
+
+    Приклад 3 , робота з тегами
+
+    <h1>hello</h1>
+
+    <form name="f1">
+    <input type="text" name="main">
+    </form>
+
+    <script>
+
+        let h1 = document.getElementsByTagName('h1')[0]; //- находимо h1
+        let main = document.forms.f1.main; //- заходимо у форму f1 в тег input , атрибут name
+        main.oninput = function ()
+        {
+            h1.innerText = main.value; // в h1 буде виводитись що що ми введемо у форму
+        }
+    </script>

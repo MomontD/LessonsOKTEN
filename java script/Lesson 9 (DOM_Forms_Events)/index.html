@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+
+<!--<form name="f1">-->
+<!--    <input type="text" name="username">-->
+<!--    <input type="text" name="email">-->
+<!--    <input type="number" min="1" max="121" name="age">-->
+<!--    <input type="color">-->
+
+<!--    <button>send</button>-->
+
+<!--</form>-->
+
+<h1>hello</h1>
+
+<form name="f1">
+
+    <input type="text" name="main">
+
+</form>
+
+<script>
+
+    let h1 = document.getElementsByTagName('h1')[0]; //- находимо h1
+    let main = document.forms.f1.main; //- заходимо у форму f1 в тег input , атрибут name
+    main.oninput = function ()
+    {
+        h1.innerText = main.value; // в h1 буде виводитись що що ми введемо у форму
+    }
+
+
+
+</script>
+
+
+
+<!--<script>-->
+
+<!--    console.log(document.children);-->
+<!--    console.log(document.head);-->
+<!--    console.log(document.body.children)-->
+<!--    let a = document.body.children-->
+<!--    console.log(a[1]);-->
+<!--    document.getElementById("lesson9")-->
+
+<!--    document.body.onmousemove = function (e)-->
+<!--    {-->
+
+<!--        console.log(e.pageX , e.pageY);-->
+<!--    }-->
+
+
+<!--</script>-->
+
+
+
+</body>
+
+
+</html>
