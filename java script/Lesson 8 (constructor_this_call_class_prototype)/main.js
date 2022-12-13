@@ -173,3 +173,4 @@ console.log(arrayOfCinderelas);
 arrayOfCinderelas.forEach((Cinderela) => Cinderela.footSize === prince.shoe ? console.log(Cinderela) : false);
 
 console.log(arrayOfCinderelas.find((Cinderela) => Cinderela.footSize === prince.shoe ? Cinderela : false));
+
