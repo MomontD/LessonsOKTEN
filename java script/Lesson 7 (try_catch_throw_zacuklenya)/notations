@@ -44,3 +44,42 @@
 //*** В даному випадку в консоль видасть "undefined"(не визначений) - тому , що user неоголошений як обєкт
 //    і не має поля.
 //    Якщо user буде оголошений як обєкт і мати поле name воно просто покаже значення user.name
+
+// Замикання - ми декларуємо дані ( let balance , transactionLimit , const historyLog = [], key = id)
+                на початку функції , а робота з ними відбувається тільки через вкладені функції. Напряму змінити їх не
+                можна. Повертаємо через return вкладені ф-ї ( getCardOptions,putCredits, takeCredits) - це і є
+                зациклення.
+
+
+const userCard = (id) => {
+    let balance = 100;
+    let transactionLimit = 100;
+    const historyLog = [];
+    const key = id;
+
+    const createMessage = (operationType, credits) => ({operationType, credits, operationTime: new Date()});
+
+    const getCardOptions = () => ({balance, historyLog, transactionLimit, key});
+
+    const putCredits = (money) => {
+        balance += money;
+        historyLog.push(createMessage('putCredits', money));
+    }
+
+    const takeCredits = (money) => {
+        if (balance - money >= 0) {
+            balance -= money;
+            historyLog.push(createMessage('takeCredits', money))
+        } else {
+            historyLog.push(createMessage('takeCreditsError'));
+            console.error('not enough money');
+        }
+    }
+
+    return {
+        getCardOptions,
+        putCredits,
+        takeCredits
+    }
+
+}

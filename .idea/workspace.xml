@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="add notations (methods_aaray_obj_string)">
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="HW (class,constructor)">
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 9 (DOM_Forms_Events)/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Lesson 9 (DOM_Forms_Events)/notations" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson 7 (try_catch,throw)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 7 (try_catch_throw_zacuklenya)/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson 7 (try_catch,throw)/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 7 (try_catch_throw_zacuklenya)/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson 7 (try_catch,throw)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 7 (try_catch_throw_zacuklenya)/notations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson 8 (constructor_this_call_class_prototype)/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -89,7 +95,13 @@
       <workItem from="1670357083600" duration="4914000" />
       <workItem from="1670362063593" duration="77000" />
       <workItem from="1670431031548" duration="7804000" />
-      <workItem from="1670505897062" duration="5206000" />
+      <workItem from="1670505897062" duration="5915000" />
+      <workItem from="1670513745153" duration="1600000" />
+      <workItem from="1670591425346" duration="5788000" />
+      <workItem from="1670662823372" duration="6876000" />
+      <workItem from="1670834772474" duration="6772000" />
+      <workItem from="1670929130768" duration="2315000" />
+      <workItem from="1670945083531" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -259,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670446858057</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="HW (class,constructor)">
+      <created>1670511197516</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670511197516</updated>
+    </task>
+    <task id="LOCAL-00026" summary="HW (class,constructor)">
+      <created>1670511237201</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670511237201</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +331,7 @@
     <MESSAGE value="Lesson 6 (methods _ array_obj_string_OVERVIEWS)" />
     <MESSAGE value="constructor_this_call_class_prototype" />
     <MESSAGE value="add notations (methods_aaray_obj_string)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add notations (methods_aaray_obj_string)" />
+    <MESSAGE value="HW (class,constructor)" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW (class,constructor)" />
   </component>
 </project>
