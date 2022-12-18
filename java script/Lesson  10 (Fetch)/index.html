@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Hello yokalmn!!!</h1>
+
+<script>
+
+    fetch('https://reqres.in/api/users')
+        .then(response => response.json())
+        .then((value) => {
+            let {data} = value;
+            // на сайті reqres.in дод викор. ієрархія - на рівні value ми отримуємо
+
+            for (const user of data)
+            {
+                let div = document.createElement('div');
+                div.classList.add('user-box');
+
+                let h2 = document.createElement('h2');
+                h2.innerText = `${user.id} ${user.first_name} ${user.last_name}`;
+
+                let img = document.createElement('img');
+
+                img.src = user.avatar;
+                img.alt = 'user avatar';
+
+                div.append(h2, img);
+
+                document.body.appendChild(div);
+            }
+        });
+</script>
+</body>
+</html>

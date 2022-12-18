@@ -1,0 +1,222 @@
+
+Читання даних з сайтів :
+
+    fetch('https://jsonplaceholder.typicode.com/users') - звертаємось за лінком
+            .then((response) => response.json()) - перетворюємо в json
+            .then((users) => console.log(users)) - працюємо з отриманим масивом обєктів і виводимо їх
+
+    Створюємо html  розмітку.
+
+    <body>
+    <h1>start</h1>
+    <ul class="target"></ul>
+    <h2>end</h2>
+
+    <script>
+        let target = document.querySelector('.target'); - знайшли за скласом target тег <ul>
+        fetch('https://jsonplaceholder.typicode.com/users') - по лінку завантажили масив обєктів
+            .then((response) => response.json()) - перетворили на json
+            .then((users) => - працюємо з масивом обєктів через цикл(виводимо ,id, name, email)
+                {
+                    for (const user of users)
+                        {
+                            let li = document.createElement('li'); створюємо <li>
+                            li.innerText = user.id + " " + user.name + " " + user.email; - наповнюємо <li> даними юзера
+                            target.appendChild(li); - додаємо <li>  в <ul>
+                        }
+                });
+    </script>
+
+    Приклад 2 : вантажимо дані з сайту і виводимо юзерів з картинками
+
+    <script>
+
+        fetch('https://reqres.in/api/users')
+            .then(response => response.json())
+            .then((value) => {
+                let {data} = value; - ДЕСТРУКТУРИЗАЦІЯ ОДРАЗУ ЗМІННІЙ data присвоємо обєкт з value
+                                      // на сайті reqres.in дод викор. ієрархія - на рівні value ми отримуємо
+                                      3 змінні , серед який data -  містить вже безпосередньо обєкт
+                for (const user of data)
+                    {
+                        let div = document.createElement('div'); - створюємо div
+                        div.classList.add('user-box'); - призначаємо class
+
+                        let h2 = document.createElement('h2'); - створюємо h2
+                        h2.innerText = `${user.id} ${user.first_name} ${user.last_name}` - наповнюємо текстом h2
+
+                        let img = document.createElement('img'); - створюємо тег  img
+                        //img.setAttribute('src', user.avatar); - можна так присв. атрирбут src та шлях до фото
+                                                                user.avatar - в масиві обєктів містить гіперлінк,
+                                                                таким чином ми вказуємо scr і гіперлінк
+                        // а можна так :
+                        img.src = user.avatar;
+                        img.alt = 'user avatar'; - те що відображається якщо картинки не буде
+
+                        div.append(h2, img); додаємо в div h2 та img
+
+                    document.body.appendChild(div); - додаємо div  в  body
+                    }
+            });
+
+    </script>
+
+ПЕРЕНАПРАВЛЕННЯ НА ІНШІ СТОРІНКИ :
+Виводимо масив обєктів (Юзерів) через гіперпосилання (fetch,<a>) переходимо на другу сторінку з відображенням їх
+детальної інформації.
+
+Принцип :
+    1. На першій сторінці ми створюємо відображення обєктів з масиву (отриманих за допомогою Fetch)
+       При нажиманні на обєкт зроблено гіперпосилання на іншу сторінку з відображенням детальної інформації про
+       користувача.
+       *** В гіперпосиланні тег <a> - конкатинуємо лінк (звідки беремо інформ. про юзера з id юзера)
+       Відповідно вигляд url : http://localhost:63342/sep-2022-js/lessons/lesson10/details.html?id=2
+       конкатенація a.href = 'details.html?id=' + user.id; В кінці html ми дописали "?id=" , ми так можемо додавати
+       будь-який параметр "?name=" , "?email=" і т.д. головне щоб такий параметр був в "джерелі" звідки ми тянемо
+       інформацію.
+
+    2. Створюємо другу сторінку(файл) details - буде відображатись детальний опис користувача (файл иає знаходитись в
+    одній папці з першою сторінкою(файлом).
+    url другої сторінки : http://localhost:63342/sep-2022-js/lessons/lesson10/details.html?id=2
+    1.За допомогою методу url  витягуємо id.
+    2. Знову використовуємо fetch і підставляємо(конкатенуємо) id з url джерела
+
+        let apiURL = 'https://reqres.in/api/users/';
+
+        let url = new URL(location.href);
+        let id = url.searchParams.get("id");
+        console.log(id);
+
+        fetch(apiURL + id))
+    3. Будуємо DOM з виводом інформації.
+
+    КОД :
+
+    Перша сторінка :
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+    <script>
+
+        fetch('https://reqres.in/api/users') - звертаємось до джерела
+            .then(response => response.json()) - виводимо інформацію
+            .then((value) =>
+            {
+                let {data} = value; - деструктуризація створ. обєкт  data з джерела value
+                console.log(data);
+                for (const user of data)
+                {
+                    let div = document.createElement('div');
+                    div.classList.add('user-box');
+                    let h2 = document.createElement('h2');
+
+                    let a = document.createElement('a');
+                    a.innerText = `${user.id} ${user.first_name} ${user.last_name}`;
+                    a.href = 'details.html?id=' + user.id; конткатенуємо гіперпосилання з id usera
+                    h2.appendChild(a);
+
+                    let img = document.createElement('img');
+                    // img.setAttribute('src', user.avatar);
+                    img.src = user.avatar;
+                    img.alt = 'user avatar';
+
+                    div.append(h2, img);
+
+                    document.body.appendChild(div);
+                }
+            });
+    </script>
+
+    </body>
+    </html>
+
+    Сторінка 2 (details)
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <h1>details page</h1>
+    <script>
+        let apiURL = 'https://reqres.in/api/users/'; - лінк на джерело інформації
+
+        let url = new URL(location.href); - витягуємо url поточної сторінки
+        let id = url.searchParams.get("id"); - витягуємо з url id користувача
+        console.log(id);
+
+        fetch(apiURL + id) - конкатенуємо url  джерела та id - таким чином доступаємось до необхідного юзера
+            .then(value => value.json())  - далі виводимо інформацію.
+            .then(value => {
+                console.log(value);
+                let {data: userData} = value;
+                let div = document.createElement('div');
+                let h2 = document.createElement('h2');
+                h2.innerText = `${userData.id} ${userData.first_name} ${userData.last_name} ${userData.email}`
+
+                let img = document.createElement('img');
+                img.src = userData.avatar;
+                div.append(h2, img);
+
+                document.body.appendChild(div);
+             });
+    </script>
+
+    </body>
+    </html>
+
+    Перекидка даних через json стрічку
+
+ <body>
+ <button class="btn">show posts</button> створємо кнопку , нажавши яку відобразиьться інформація з масиву.
+ <div class="target"></div>
+
+ <script>
+
+      let target = document.querySelector('.target'); знаходимо div
+      let btn = document.querySelector('.btn'); - знаходимо кнопку
+      btn.onclick = function () {  - подія onclick на натискання на кнопку
+
+          fetch('https://jsonplaceholder.typicode.com/posts') - звертаємось до джерела з даними
+              .then(value => value.json())
+              .then(posts => {
+                  for (const post of posts) {
+                      let div = document.createElement('div'); підкожний елемент масиву створюємо div
+                      div.innerText = post.title; додаємо в div інформацію з масиву під ключем title
+                      let a = document.createElement('a'); - створюємо гіперпосилання
+                      a.innerText = 'details about post'; - інформація в гіперпосиланні
+                      a.href = 'post-detaiils.html?post=' + JSON.stringify(post); - лінк куди будемо переходити +
+                      додаємо (конкатинуємо url з елементом масиву переворивши його в json)
+                      div.appendChild(a); - додаємо гіперпосилання до div
+                      document.body.appendChild(div); - ljlf'vj додаємо div до body
+
+                  }
+
+
+              });
+      };
+  </script>
+
+  Другий файл (сторінка)
+  <body>
+
+  <script>
+      let yourPageURLExactUrlInSearchBar = location.href; - зчитуємо поточний url сторінки
+      let url = new URL(yourPageURLExactUrlInSearchBar); - затягуємо його до змінної url
+      let post = url.searchParams.get('post'); - шукаємо дані в url  які починаються з post.
+             ***http://localhost:63342/sep-2022-js/lessons/lesson10/details.html?id=2
+             параметр "?post=", "?name=" , "?email=" і т.д.
+
+      let parse = JSON.parse(post); - парсимо дані з post до нормального обєкту
+      console.log(parse); - виводимо обєкт
+
+      // build DOM
+  </script>
+  </body>
