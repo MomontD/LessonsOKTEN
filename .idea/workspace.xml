@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="DOM , forms , events - practic">
-      <change afterPath="$PROJECT_DIR$/java script/Lesson  10 (Fetch)/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Lesson  10 (Fetch)/notations" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Project js/details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Project js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Project js/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Project js/test.html" afterDir="false" />
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Fetch + URL + JSON">
+      <change afterPath="$PROJECT_DIR$/java script/Project js/post-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Lesson  10 (Fetch)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson  10 (Fetch)/notations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JavaScript"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JavaScript&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,7 +103,8 @@
       <workItem from="1670945083531" duration="1690000" />
       <workItem from="1671045492463" duration="2364000" />
       <workItem from="1671196803293" duration="10370000" />
-      <workItem from="1671352881345" duration="21722000" />
+      <workItem from="1671352881345" duration="21977000" />
+      <workItem from="1671453801271" duration="14372000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -310,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670946214251</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Project version 1 &#10;- front-end index.html &#10;- front-end details.html (only view details without buttons)">
+      <created>1671388689296</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1671388689296</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fetch + URL + JSON">
+      <created>1671388752531</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1671388752531</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +373,8 @@
     <MESSAGE value="HW (class,constructor,zamykanya)" />
     <MESSAGE value="HW (constructor_this_call_class_prototype)" />
     <MESSAGE value="DOM , forms , events - practic" />
-    <option name="LAST_COMMIT_MESSAGE" value="DOM , forms , events - practic" />
+    <MESSAGE value="Project version 1 &#10;- front-end index.html &#10;- front-end details.html (only view details without buttons)" />
+    <MESSAGE value="Fetch + URL + JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fetch + URL + JSON" />
   </component>
 </project>
