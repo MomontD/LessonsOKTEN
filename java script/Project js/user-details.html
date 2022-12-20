@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>detailed information</title>
-    <link rel="stylesheet", href="style.css">
+    <link rel="stylesheet", href="ListOfUsers.css">
 
 </head>
 <body>
@@ -16,8 +16,8 @@
 <!--//      informOfUser - виводиться інформація про юзера-->
 <!--//      button - кнопка , при нажиманні відображається інформація про title з постів-->
 <!--//      TitleOfPosts - безпосердньо title-->
-<div class="mainDivDetailsUser">
-    <div class="informOfUser"> </div>
+<div class="mainDivUserDetails">
+    <div class="informationOfUser"> </div>
     <div class="button">
         <button class="btn">post of current user</button>
     </div>
@@ -27,11 +27,14 @@
 <script>
 
     // опис змінних та script для відображення детальної інформації про користувача
-    let informOfUser = document.querySelector(".informOfUser")
-    let incomingUrl = new URL(location.href)
-    let id = incomingUrl.searchParams.get("id")
+    let informationOfUser = document.querySelector(".informationOfUser") // находимо div class="informOfUser"
+    let button = document.querySelector(".btn")                // находимо button class="btn"
+    let titleOfPosts = document.querySelector(".titleOfPosts") // находимо div class="titleOfPosts"
 
-    fetch('https://jsonplaceholder.typicode.com/users/' + id)
+    let incomingUrl = new URL(location.href)
+    let userId = incomingUrl.searchParams.get("id")
+
+    fetch('https://jsonplaceholder.typicode.com/users/' + userId)
         .then(inCommingUser => inCommingUser.json())
         .then( user =>
             {
@@ -47,16 +50,14 @@
                              Phone : ${user.phone}
                              Website : ${user.website}
                              Company : ${user.company.name},catchPhrase :${user.company.catchPhrase},bs :${user.company.bs}`
-                informOfUser.appendChild(div)
+                informationOfUser.appendChild(div)
             })
 
-    // опис змінних та реалзація кнопки button
-    let button = document.querySelector(".btn")
-    let titleOfPosts = document.querySelector(".titleOfPosts")
+    //реалзація кнопки button
 
     button.onclick = function ()
         {
-            fetch("https://jsonplaceholder.typicode.com/users/" + id + "/posts")
+            fetch("https://jsonplaceholder.typicode.com/users/" + userId + "/posts")
                 .then(inCommingUserPost => inCommingUserPost.json())
                 .then( posts =>
                     {
@@ -69,23 +70,13 @@
                             buttonOfPosts.innerText = "detailed information of posts"
                             buttonOfPosts.setAttribute(
                             "onclick",`document.location="post-details.html?postId=" + ${userPost.id}`)
-
                             titleOfPosts.append(divOfTitle,buttonOfPosts)
-
                         })
                     })
         }
 
 
-
-
-
-
 </script>
-
-
-
-
 
 </body>
 </html>

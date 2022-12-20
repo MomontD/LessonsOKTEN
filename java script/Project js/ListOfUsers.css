@@ -1,13 +1,9 @@
 .mainDiv
     {
-
         justify-content: space-around;
-
-
     }
 .Chaild
     {
         border: 1px solid blue;
         margin: 2px
-
     }

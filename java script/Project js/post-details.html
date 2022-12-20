@@ -6,12 +6,57 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>detailed information</title>
-  <link rel="stylesheet", href="style.css">
+  <link rel="stylesheet", href="ListOfUsers.css">
 
 </head>
 <body>
 
-<div class="mainDivDetailsPost"> </div>
+<div class="mainDivDetailsPost">
+  <div class="postDiv">
+    <h3> Information about post </h3>
+  </div>
+  <div class="dividerDiv">
+    <h3> Post comments </h3>
+  </div>
+  <div class="commentsDiv"></div>
+</div>
+
+<script>
+
+  let incomingUrl = new URL(location.href)
+  let postId = incomingUrl.searchParams.get("postId")
+
+  let postDiv = document.querySelector(".postDiv")
+  let commentsDiv = document.querySelector(".commentsDiv")
+
+
+
+  fetch("https://jsonplaceholder.typicode.com/posts/" + postId)
+          .then(inCommingObject => inCommingObject.json())
+          .then( postOfUser =>
+            {
+              for (const element in postOfUser)
+               {
+                  divElementPost = document.createElement("div")
+                  divElementPost.innerText = `${element} : ${postOfUser[element]}`
+                  postDiv.append(divElementPost)
+               }
+            })
+
+  fetch("https://jsonplaceholder.typicode.com/posts/" + postId + "/comments")
+          .then(inCommingObject => inCommingObject.json())
+          .then( comentsOfPost =>
+            {
+              comentsOfPost.forEach ( comments =>
+                {
+                  divOfComents = document.createElement("div")
+                  divOfComents.innerText= `User name : ${comments.name}
+                                           Comment : ${comments.body}`
+                  commentsDiv.append(divOfComents)
+                })
+            })
+
+</script>
 
 
 </body>
