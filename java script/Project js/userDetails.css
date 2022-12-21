@@ -1,0 +1,34 @@
+
+.informationOfUser div
+    {
+     border: 1px solid black
+    }
+.button{
+    width:100%;
+}
+.btn
+    {
+    margin:10px auto;
+    border-radius:3px;
+    background-color:lightblue;
+    border: 1px solid black;
+    display: block;
+    width: 90%;
+    }
+.titleOfPosts > div{
+    float:left;
+    width:17%;
+    margin:5px;
+    padding:3px;
+    min-height:25vh;
+    border: 1px solid black;
+}
+.titleOfPosts > div > div{
+    min-height: 25vh;
+}
+.titleOfPosts > div button{
+    margin:10px auto;
+    border-radius:3px;
+    background-color:lightblue;
+    border: 1px solid black;
+}

@@ -10,12 +10,12 @@ fetch('https://jsonplaceholder.typicode.com/users')
             userDiv = document.createElement("div")
             userDiv.classList.add("userDiv")
             userDiv.innerText = `Name : ${user.name}
-                                           ID   : ${user.id}`
+                                 ID   : ${user.id}`
 
             buttonDiv = document.createElement("div")
             button = document.createElement("button")
             button.innerText = "detailed information of user"
-            button.setAttribute("onclick",`document.location='user-details.html?id='+ ${user.id}`)
+            button.setAttribute("onclick",`document.location='userDetails.html?id='+ ${user.id}`)
 
             buttonDiv.appendChild(button)
             userDiv.appendChild(buttonDiv)

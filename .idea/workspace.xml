@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="З другою і третоьою (пустою) сторінкою безе переходу з другої&#10;Кнопка не передає ід юззера і поста разом в урл">
-      <change afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Project js/user-details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java script/Project js/user-details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Project js/userDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Project js/userDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java script/Project js/userDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Lesson  10 (Fetch)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Lesson  10 (Fetch)/notations" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/user-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/post-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/post-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/post-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/user-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/user-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/user-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +112,8 @@
       <workItem from="1671352881345" duration="21977000" />
       <workItem from="1671453801271" duration="14372000" />
       <workItem from="1671472114256" duration="7255000" />
-      <workItem from="1671533136801" duration="11515000" />
+      <workItem from="1671533136801" duration="11661000" />
+      <workItem from="1671614871505" duration="9229000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -337,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671472220532</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="З другою і третоьою (пустою) сторінкою безе переходу з другої&#10;Кнопка не передає ід юззера і поста разом в урл">
+      <created>1671551045813</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1671551045813</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

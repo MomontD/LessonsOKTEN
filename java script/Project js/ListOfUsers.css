@@ -1,9 +1,22 @@
-.mainDiv
+
+.userDiv
     {
-        justify-content: space-around;
+        float: left;
+        width: 45%;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
     }
-.Chaild
+
+.userDiv div
     {
-        border: 1px solid blue;
-        margin: 2px
+        margin:5px auto;
+    }
+
+.userDiv div button
+    {
+        border-radius:3px;
+        background-color:lightblue;
+        border: 1px solid black;
     }

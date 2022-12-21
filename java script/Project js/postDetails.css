@@ -1,0 +1,8 @@
+.commentsDiv > div{
+    margin:5px;
+    padding:5px;
+    border: 1px solid black;
+    float: left;
+    width:20%;
+    min-height: 320px;;
+}
