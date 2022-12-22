@@ -44,7 +44,7 @@ button.onclick = function ()
                                                       ${userPost.title}`
 
                 buttonOfPosts = document.createElement("button")
-                buttonOfPosts.innerText = "detailed information of post"
+                buttonOfPosts.innerText = "Detailed information of post"
                 buttonOfPosts.setAttribute(
                     "onclick",`document.location="postDetails.html?postId=" + ${userPost.id}`)
 

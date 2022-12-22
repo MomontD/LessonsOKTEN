@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Поділені по файлам та з css - підшліфовано">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.css" afterDir="false" />
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Поділені по файлам та з css - підшліфовано 2">
+      <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <workItem from="1671533136801" duration="11661000" />
       <workItem from="1671614871505" duration="9410000" />
       <workItem from="1671715890159" duration="5976000" />
-      <workItem from="1671729511735" duration="2162000" />
+      <workItem from="1671729511735" duration="2464000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -357,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671726273218</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Поділені по файлам та з css - підшліфовано 2">
+      <created>1671731721387</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1671731721387</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lesson 1" />
     <MESSAGE value="lesson 2" />
     <MESSAGE value="lesson 2 (corecting)" />
     <MESSAGE value="lesson 3 (if and switc)" />
@@ -412,6 +415,7 @@
     <MESSAGE value="З другою і третоьою (пустою) сторінкою безе переходу з другої&#10;Кнопка не передає ід юззера і поста разом в урл" />
     <MESSAGE value="Поділені по файлам та з css" />
     <MESSAGE value="Поділені по файлам та з css - підшліфовано" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поділені по файлам та з css - підшліфовано" />
+    <MESSAGE value="Поділені по файлам та з css - підшліфовано 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поділені по файлам та з css - підшліфовано 2" />
   </component>
 </project>
