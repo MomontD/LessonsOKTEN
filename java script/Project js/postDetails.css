@@ -2,11 +2,17 @@
     {
         background: aliceblue;
         border: 1px solid black;
+        padding:7px;
+        margin:5px 5%;
+        width:50%;
     }
-
+.connectDiv{
+    text-align: center;
+}
 .connectDiv, divBoxNameComment
     {
         width:100%;
+        margin:5px 5%;
     }
 
 .connectDiv > div
@@ -16,7 +22,7 @@
         border: 1px solid black;
         float: left;
         width:20%;
-        min-height: 100vh;
+        min-height: 60vh;
         background: aliceblue;
     }
 
@@ -28,6 +34,9 @@
 
 .useBlock
     {
-        min-height:25vh;
+        min-height:15vh;
         border-bottom: 1px solid black;
     }
+.mainDivDetailsPost h3{
+    margin:5px 5%;
+}

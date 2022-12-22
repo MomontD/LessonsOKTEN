@@ -5,10 +5,17 @@
 .title h3{
     margin:3px auto !important;
 }
+.mainDivOfUsers{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
 .userDiv
     {
-        float: left;
-        width: 45%;
+        /*float: left;
+        width: 47%;*/
+        flex: 47%;
         border: 1px solid black;
         margin: 5px;
         padding: 5px;
