@@ -22,11 +22,11 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId)
              Geo : lat ${user.address.geo.lat} , lng ${user.address.geo.lng}
              Phone : ${user.phone}
              Website : ${user.website}
-             Company : ${user.company.name},catchPhrase :${user.company.catchPhrase},bs :${user.company.bs}`
+             Company : ${user.company.name},
+             catchPhrase :${user.company.catchPhrase},
+             bs :${user.company.bs}`
         informationOfUser.appendChild(div)
     })
-
-//реалзація кнопки button
 
 button.onclick = function ()
 
@@ -35,6 +35,7 @@ button.onclick = function ()
         .then(inCommingUserPost => inCommingUserPost.json())
         .then( posts =>
         {
+            titleOfPosts.innerHTML = "";
             posts.forEach( userPost =>
             {
                 divOfTitle = document.createElement("div")
@@ -43,13 +44,13 @@ button.onclick = function ()
                                                       ${userPost.title}`
 
                 buttonOfPosts = document.createElement("button")
-                buttonOfPosts.innerText = "detailed information of posts"
+                buttonOfPosts.innerText = "detailed information of post"
                 buttonOfPosts.setAttribute(
                     "onclick",`document.location="postDetails.html?postId=" + ${userPost.id}`)
 
-                divOBlock = document.createElement("div")
-                divOBlock.append(divOfTitle,buttonOfPosts)
-                titleOfPosts.append(divOBlock)
+                divBlock = document.createElement("div")
+                divBlock.append(divOfTitle,buttonOfPosts)
+                titleOfPosts.append(divBlock)
 
             })
         })

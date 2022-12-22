@@ -1,8 +1,33 @@
-.commentsDiv > div{
-    margin:5px;
-    padding:5px;
-    border: 1px solid black;
-    float: left;
-    width:20%;
-    min-height: 320px;;
-}
+.postDiv
+    {
+        background: aliceblue;
+        border: 1px solid black;
+    }
+
+.connectDiv, divBoxNameComment
+    {
+        width:100%;
+    }
+
+.connectDiv > div
+    {
+        margin:5px;
+        padding:5px;
+        border: 1px solid black;
+        float: left;
+        width:20%;
+        min-height: 100vh;
+        background: aliceblue;
+    }
+
+.connectDiv > div div
+    {
+        margin:5px;
+        padding:5px;
+    }
+
+.useBlock
+    {
+        min-height:25vh;
+        border-bottom: 1px solid black;
+    }

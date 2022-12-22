@@ -1,4 +1,10 @@
+.title{
+    text-align: center;
 
+}
+.title h3{
+    margin:3px auto !important;
+}
 .userDiv
     {
         float: left;

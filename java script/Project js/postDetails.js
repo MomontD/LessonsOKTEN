@@ -2,10 +2,8 @@
 let incomingUrl = new URL(location.href)
 let postId = incomingUrl.searchParams.get("postId")
 
+let connectDiv = document.querySelector(".connectDiv")
 let postDiv = document.querySelector(".postDiv")
-let commentsDiv = document.querySelector(".commentsDiv")
-
-
 
 fetch("https://jsonplaceholder.typicode.com/posts/" + postId)
     .then(inCommingObject => inCommingObject.json())
@@ -25,10 +23,17 @@ fetch("https://jsonplaceholder.typicode.com/posts/" + postId + "/comments")
     {
         comentsOfPost.forEach ( comments =>
         {
+            divOfUserName = document.createElement("div")
+            divOfUserName.innerText= `User name : ${comments.name}`
+            divOfUserName.classList.add('useBlock');
+
             divOfComents = document.createElement("div")
-            divOfComents.innerText= `User name : ${comments.name}
-                                     Comment : 
-                                     ${comments.body}`
-            commentsDiv.append(divOfComents)
+            divOfComents.innerText = `Comment :
+                                      ${comments.body}`
+
+            divBlock = document.createElement("div")
+            divBlock.append(divOfUserName, divOfComents)
+
+            connectDiv.append(divBlock)
         })
     })
