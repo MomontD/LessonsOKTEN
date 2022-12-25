@@ -28,7 +28,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/" + postId + "/comments")
             divOfUserName = document.createElement("div")  // створємо окремий блок для імя коментатора
             divOfUserName.innerHTML= ` User name :  
                                       <p> ${comments.name} </p>`
-            divOfUserName.classList.add('useBlock');
+            divOfUserName.classList.add('userBlock');
 
             divOfComents = document.createElement("div")   //  створємо окремий блок для коментаря
             divOfComents.innerHTML = `Comment : 

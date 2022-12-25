@@ -1,6 +1,6 @@
 .postDiv
     {
-        background: lightskyblue;
+        background: lightblue;
         border: 1px solid black;
         padding:7px;
         margin:5px 5%;
@@ -27,7 +27,7 @@
         float: left;
         width:20%;
         min-height: 60vh;
-        background: lightskyblue;
+        background: lightblue;
         border-radius:5px;
     }
 
@@ -37,7 +37,7 @@
         padding:5px;
     }
 
-.useBlock
+.userBlock
     {
         min-height:15vh;
         border-bottom: 1px solid black;
