@@ -4,14 +4,8 @@
     <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Поділені по файлам та з css - підшліфовано 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +112,7 @@
       <workItem from="1671729511735" duration="2484000" />
       <workItem from="1671877312761" duration="1024000" />
       <workItem from="1671972543178" duration="7351000" />
+      <workItem from="1671992127408" duration="1735000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>

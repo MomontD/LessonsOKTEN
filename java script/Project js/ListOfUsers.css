@@ -24,6 +24,7 @@
         margin: 5px;
         padding: 5px;
         text-align: center;
+        border-radius:5px;
     }
 
 .userDiv div
@@ -34,6 +35,6 @@
 .userDiv div button
     {
         border-radius:3px;
-        background-color:lightblue;
+        background-color:lightskyblue;
         border: 1px solid black;
     }

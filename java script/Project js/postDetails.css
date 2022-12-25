@@ -1,10 +1,11 @@
 .postDiv
     {
-        background: aliceblue;
+        background: lightskyblue;
         border: 1px solid black;
         padding:7px;
         margin:5px 5%;
         width:50%;
+        border-radius:5px;
     }
 
 .connectDiv
@@ -26,7 +27,8 @@
         float: left;
         width:20%;
         min-height: 60vh;
-        background: aliceblue;
+        background: lightskyblue;
+        border-radius:5px;
     }
 
 .connectDiv > div div

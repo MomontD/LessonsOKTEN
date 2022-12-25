@@ -10,6 +10,11 @@
      width:50%;
     }
 
+.detailInformationOfUser
+    {
+        border-radius:5px;
+    }
+
 .button
     {
         width:100%;
@@ -18,8 +23,8 @@
 .btn
     {
         margin:10px auto;
-        border-radius:3px;
-        background-color:lightblue;
+        border-radius:5px;
+        background-color:lightskyblue;
         border: 1px solid black;
         display: block;
         width: 90%;
@@ -39,6 +44,7 @@
         padding:3px;
         min-height:25vh;
         border: 1px solid black;
+        border-radius:5px;
     }
 
 .titleOfPosts > div > div
@@ -50,6 +56,6 @@
     {
         margin:10px auto;
         border-radius:3px;
-        background-color:lightblue;
+        background-color:lightskyblue;
         border: 1px solid black;
     }
