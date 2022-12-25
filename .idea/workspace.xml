@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Поділені по файлам та з css - підшліфовано 2">
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Поділені по файлам та з css - підшліфовано 3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/ListOfUsers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/listOfUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java script/Project js/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/userDetails.js" afterDir="false" />
     </list>
@@ -107,7 +115,9 @@
       <workItem from="1671533136801" duration="11661000" />
       <workItem from="1671614871505" duration="9410000" />
       <workItem from="1671715890159" duration="5976000" />
-      <workItem from="1671729511735" duration="2464000" />
+      <workItem from="1671729511735" duration="2484000" />
+      <workItem from="1671877312761" duration="1024000" />
+      <workItem from="1671972543178" duration="7351000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -361,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671731721387</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Поділені по файлам та з css - підшліфовано 3">
+      <created>1671732006241</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1671732006241</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +408,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lesson 2" />
     <MESSAGE value="lesson 2 (corecting)" />
     <MESSAGE value="lesson 3 (if and switc)" />
     <MESSAGE value="lesson 4 (loops for wjile)" />
@@ -416,6 +432,7 @@
     <MESSAGE value="Поділені по файлам та з css" />
     <MESSAGE value="Поділені по файлам та з css - підшліфовано" />
     <MESSAGE value="Поділені по файлам та з css - підшліфовано 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поділені по файлам та з css - підшліфовано 2" />
+    <MESSAGE value="Поділені по файлам та з css - підшліфовано 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поділені по файлам та з css - підшліфовано 3" />
   </component>
 </project>

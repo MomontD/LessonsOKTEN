@@ -1,10 +1,11 @@
 
-let incomingUrl = new URL(location.href)
-let postId = incomingUrl.searchParams.get("postId")
+let incomingUrl = new URL(location.href)             // читаємо url
+let postId = incomingUrl.searchParams.get("postId") // та знаходимо необхідний id
 
-let connectDiv = document.querySelector(".connectDiv")
-let postDiv = document.querySelector(".postDiv")
+let postDiv = document.querySelector(".postDiv")         // знаходимо блок для наповнення інформації про пост
+let connectDiv = document.querySelector(".connectDiv")  //  знаходимо блок для наповнення інформації про коментар
 
+// виводимо детальну інформацію про пост користувача
 fetch("https://jsonplaceholder.typicode.com/posts/" + postId)
     .then(inCommingObject => inCommingObject.json())
     .then( postOfUser =>
@@ -17,23 +18,31 @@ fetch("https://jsonplaceholder.typicode.com/posts/" + postId)
         }
     })
 
+// виводимо інформацію про коментарі до посту
 fetch("https://jsonplaceholder.typicode.com/posts/" + postId + "/comments")
     .then(inCommingObject => inCommingObject.json())
     .then( comentsOfPost =>
     {
         comentsOfPost.forEach ( comments =>
         {
-            divOfUserName = document.createElement("div")
-            divOfUserName.innerText= `User name : ${comments.name}`
+            divOfUserName = document.createElement("div")  // створємо окремий блок для імя коментатора
+            divOfUserName.innerHTML= ` User name :  
+                                      <p> ${comments.name} </p>`
             divOfUserName.classList.add('useBlock');
 
-            divOfComents = document.createElement("div")
-            divOfComents.innerText = `Comment :
-                                      ${comments.body}`
+            divOfComents = document.createElement("div")   //  створємо окремий блок для коментаря
+            divOfComents.innerHTML = `Comment : 
+                                       <p> ${comments.body} </p>`
 
-            divBlock = document.createElement("div")
+            divBlock = document.createElement("div")       // створюємо divBlock в який додамо блок з імям та коментарем
             divBlock.append(divOfUserName, divOfComents)
 
-            connectDiv.append(divBlock)
+            connectDiv.append(divBlock)                            // додаємо кожний divBlock в "зєднуючий" контейнер
+                                                                   // connectDiv
         })
     })
+
+// Структура алгоритму :
+// 1. Читаємо url та знаходимо необхідний id користувача
+// 2. Виводимо детальну інформацію про пост користувача
+// 3. Виводимо інформацію про коментарі до посту

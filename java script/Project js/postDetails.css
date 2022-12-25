@@ -6,9 +6,12 @@
         margin:5px 5%;
         width:50%;
     }
-.connectDiv{
-    text-align: center;
-}
+
+.connectDiv
+    {
+        text-align: center;
+    }
+
 .connectDiv, divBoxNameComment
     {
         width:100%;
@@ -37,6 +40,7 @@
         min-height:15vh;
         border-bottom: 1px solid black;
     }
-.mainDivDetailsPost h3{
-    margin:5px 5%;
-}
+.mainDivDetailsPost h3
+    {
+        margin:5px 5%;
+    }

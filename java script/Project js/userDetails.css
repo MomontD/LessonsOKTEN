@@ -1,43 +1,55 @@
-.informationOfUser{
-    margin:5px 5%;
+.informationOfUser
+    {
+        margin:5px 5%;
+    }
 
-}
 .informationOfUser div
     {
      border: 1px solid black;
      padding:5px;
      width:50%;
     }
-.button{
-    width:100%;
-}
+
+.button
+    {
+        width:100%;
+    }
+
 .btn
     {
-    margin:10px auto;
-    border-radius:3px;
-    background-color:lightblue;
-    border: 1px solid black;
-    display: block;
-    width: 90%;
+        margin:10px auto;
+        border-radius:3px;
+        background-color:lightblue;
+        border: 1px solid black;
+        display: block;
+        width: 90%;
     }
-.titleOfPosts{
-    margin: 5px 5%;
-    text-align: center;
-}
-.titleOfPosts > div{
-    float:left;
-    width:18%;
-    margin:5px;
-    padding:3px;
-    min-height:25vh;
-    border: 1px solid black;
-}
-.titleOfPosts > div > div{
-    min-height: 25vh;
-}
-.titleOfPosts > div button{
-    margin:10px auto;
-    border-radius:3px;
-    background-color:lightblue;
-    border: 1px solid black;
-}
+
+.titleOfPosts
+    {
+        margin: 5px 5%;
+        text-align: center;
+    }
+
+.titleOfPosts > div
+    {
+        float:left;
+        width:18%;
+        margin:5px;
+        padding:3px;
+        min-height:25vh;
+        border: 1px solid black;
+    }
+
+.titleOfPosts > div > div
+    {
+        min-height: 25vh;
+    }
+
+.titleOfPosts > div button
+    {
+        margin:10px auto;
+        border-radius:3px;
+        background-color:lightblue;
+        border: 1px solid black;
+    }

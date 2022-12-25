@@ -1,16 +1,20 @@
-.title{
-    text-align: center;
+.title
+    {
+        text-align: center;
+    }
 
-}
-.title h3{
-    margin:3px auto !important;
-}
-.mainDivOfUsers{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.title h3
+    {
+        margin:3px auto !important;
+    }
 
-}
+.mainDivOfUsers
+    {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 .userDiv
     {
         /*float: left;
