@@ -1,0 +1,140 @@
+Бази даних SQL
+
+Команди через консоль
+
+1. use usermid - підключення БД usermid. Щоб працювати з БД її необхідно підключити за
+                 допомогою оператора use
+
+2. create table testTable - створення нової таблиці testTable
+
+                create table testTable
+                    (
+                        id     int primary key auto_increment,
+                        name   varchar(255) not null,
+                        age    int not null,
+                        gender varchar(6) not null
+                    )
+
+
+
+                *** int - цілочисельні значення , число 2 в 32 степені
+                *** bigint - цілочисельні значення, число 2 в 64 степені
+                *** varchar - стрінгові значення , в дужках задаємо максимальну к-сть символів
+                *** not null - поле не може бути пустим
+                *** auto_increment - автоматичне заповнення поля числом від 1 до ...
+                *** primary key - пріоритетна(ключова) колонка. Система автоматично проставить not null
+
+3.insert into testTable - додавання елементів в таблицю testTable.
+                          Команда insert into            id     name   age  gender
+                          insert into testTable values (null, 'Vasya', 22 , 'male');
+
+3.1 Видалення елементів таблиці
+    delete from users where name='Vasya'
+
+3.2 Зміна елементу
+    update users set age=100 where name='kokos'
+
+----------------------------------------------------------------------------
+Принцип , алгоритм , полсідовність роботи з командами :
+
+select    - from - where - group by/having - order by - limit
+
+select    - обираємо з якими стовпцями або назвами полів будемо працювати
+            select * - всі стовпці
+            select age,name - обрані стовпці
+from      - з якої таблиці
+            from testTable - з таблиці testTable
+where     - "де знаходиться" ?
+            select * from users where age>16
+group by  - групування по ознаці , використовується тільки з count(*)
+            select count(*),year from cars group by year
+having    - додаткова умова яка використовується після where  як where
+
+order by  - сортування
+            select * from users order by age asc
+----------------------------------------------------------------------------
+
+4. Вивід таблиці в консоль
+                    select * from testTable  - виводимо всю таблицю
+                            select  - "витягнути"(вивести) в консоль
+                            *       - всі стовпчики
+                            from    - звідки
+                            testTable - назва таблиці
+
+                    select id,age from testTable  - виводимо колонки id та age
+
+5. Фільтрація
+                    select * from users where age=16  - вибираємо всіх користувачів які мають вік 16
+                        * обрати всі колонки
+                        * where  - команда після якої вказується умова
+
+                    select * from users where name='kokos' - вибираємо всіх користувачів які мають name kokos
+
+                    select * from users where age>16 - фільтрація всіх в кого вік більше 16
+
+                    select * from users where age between 20 and 30 - входять у діапазон 20- 30
+                    select * from users where age not between 20 and 30 - не входять у діапазон 20 - 30
+
+                    select * from users where age in (16,25,30) - виводить всіх кор. хто має 16,25,30 років
+                    select * from users where age not in (16,25,30) - виводить всіх кор. окрім 16,25,30 років
+
+                    select * from users where age=16 and gender='male' - фільтрація по віку 16 та гендеру male
+                    select * from users where age=16 or age=30 - фільтрація користувачів по віку 16 та 30
+                    select * from users where age=16 or gender='male' - виведе всіх у кого 16 років та всіх хто male
+
+                    select * from users where length(name) > 4 - фільтрація корист. в кого імя більше за 4 символи
+
+                    like :
+                    select * from users where name like 'kokos' - виведе всіх користувачів з іменем kokos
+                                            синтаксис like 'kokos' - пошук по імені
+                                                           'o%'    - шукає всі слова де перша буква 'о'
+                                                           '%о'    - шукає всі слова де остання буква 'о'
+                                                           '%le%'  - шукає всі слова де деє сполучення 'le'
+                                                           '__о%'  - пропускає перші 2 символи, шукає 'о'
+
+                    order by  - сортування
+                    select * from users order by age asc  - відсортує всіх кор. по віку від меншого до більшого
+                                                            (команда asc)
+                    select * from users order by age desc - від більшого до меншого
+                    select * from users where length(name)>4 order by age asc - відсортує всіх в кого імя більше 4
+                                                                                символів
+                    select *,model='audi' from cars order by price - відсортує всі моделі ауді по прайсу від найм до
+                                                                     найб.
+
+                    limit/offset
+                    limit - виведе конкретну к-сть
+                    offset - пропустить конкретну к-сть
+                    select * from users limit 2 - виведе перших двох користувачів
+                    select * from users limit 2 offset 5 - пропустить перших 5 і виведе наступні 2
+                    select * from users where length(name)>4 order by age asc limit 2 offset 5 - складніша комбін.
+                                        відсортує всіх в кого імя більше 4 символів , пропустить перших 5 і виведе
+                                        наступні 2
+
+6. Агрегатні ф-ї
+
+min - мінімальне значення
+max - максимальне значення
+avg - середнє значення
+sum - сума
+count - підрахунок
+
+        select min(price) from cars - виведе мінімальну ціну авто з прайсу
+        select max(price) from cars - виведе макс ціну авто з прайсу
+        select avg(price) from cars - виведе середнє значення цін автомобілів з прайсу
+        select sum(price) from cars - виведе суму всіх авто з прайсу
+        select coumt(price) from cars - виведе к-сть позицій в прайсі
+
+
+
+        Використання групування group by
+        select count(*),model from cars group by model - виведе групи моделів авто (ауді , порш і т.д.) та їх
+                                                         кількість : ауді - 25 шт., порше - 5 шт. і т.д.
+        select count(*),year from cars group by year   - виведе групи по рокам та кількість машин.
+                                                         2000р - 15шт. , 2005 - 5 шт. і т.д.
+        select max(price),model from cars group by model order by max(price) - виведе найдорожче авто з групи (сеат ,
+        або так :                                                              ауді) та відсортує по ціні
+        select max(price) as maxCost,model from cars group by model order by maxCost - присвоюємо імя maxCost
+                                                         для maxprice для віддачі на бек енд.
+        select count(*) as count,model from cars where year>2005 group by model having count>2 - згрупує всі авто (сеат
+                                                            , ауді) старші 2005р і яких більше 2-ох в групі
+

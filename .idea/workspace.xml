@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="Finished!!!">
-      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java script/Project js/postDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/java script/Project js/postDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL/Lesson1/notations1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,9 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
       &quot;JavaScript&quot;
     ]
@@ -110,7 +114,9 @@
       <workItem from="1671729511735" duration="2484000" />
       <workItem from="1671877312761" duration="1024000" />
       <workItem from="1671972543178" duration="7351000" />
-      <workItem from="1671992127408" duration="2150000" />
+      <workItem from="1671992127408" duration="4525000" />
+      <workItem from="1672135836080" duration="11849000" />
+      <workItem from="1672246944019" duration="4581000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -378,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671994027104</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Finished!!!">
+      <created>1671994534300</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1671994534300</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
