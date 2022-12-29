@@ -1,0 +1,48 @@
+Revelations - звязки.
+Можна встановлювати звязки між таблицями (колонками таблиць)
+
+create table citis
+(
+    id int primary key auto_increment,
+    city varchar(6) not null
+);
+=>      id |  city
+        ---------
+        1, |  lviv
+        2, |  kyiv
+        3, |  Lutsk
+
+create table users2
+(
+    id int primary key auto_increment,
+    name varchar(10) not null,
+    cityId int null,
+    foreign key (cityId) references citis(id)  - посиланнґ на колонку id таблиці citis
+);
+
+select * from users2 join citis c on c.id = users2.cityId - приєднання таблиць за допомогою join
+            *** c on c.id  - система пропонує в подальшому назвати таблицю citis на с і привязати
+                її id до клонки cityId таблиці users2
+=>
+        id |  name   | cityId        id  |  city
+        ---------------------        ------------
+        1, |  vasya  |   1    =>      1  |  lviv
+        2, |  petya  |   2    =>      2  |  kyiv
+        3, |  kolya  |   3    =>      3  |  Lutsk
+
+є ще 2 види join :
+    select * from users2 left join citis c on c.id = users2.cityId - пріоритетноє є "ліва" табличка,
+    і на її основі сформується нова таблиця ( з її колонками і стовпцями).
+    select * from users2 right join citis c on c.id = users2.cityId - аналогічно , тільки права таблиця.
+
+Робота з обєднаними таблицями :
+
+select * from users2 join citis c on c.id = users2.cityId
+    where cityId=1 або city='lviv' --- виведе всіх користувачів які проживають у Львові
+
+В обєднану таблицю ми можемо виводити будь-які колонки вказуючи їх після select
+select name,city from users2 join citis c on c.id = users2.cityId
+    where cityId=1 або city='lviv'   - виведе всіх користувачів з полями name та city які проживають у Львові
+
+select users2.* from users2 join citis c on c.id = users2.cityId
+    where cityId=1 або city='lviv' - виведе всіх користувачів з таблиці users2 проживають у Львові
