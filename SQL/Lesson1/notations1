@@ -140,4 +140,12 @@ count - підрахунок
                                                          для maxprice для віддачі на бек енд.
         select count(*) as count,model from cars where year>2005 group by model having count>2 - згрупує всі авто (сеат
                                                             , ауді) старші 2005р і яких більше 2-ох в групі
-
+        -----------------------------------------------------------------------------------------
+        select * from cars where year in ( select year from cars where price > (select avg(price) from cars))
+                    (select avg(price) from cars)  - виводимо середнє арифмет. цін з прайсу
+                    (select year from cars where price > (select avg(price) from cars) - виводимо машини , ціна яких
+                    більша за середнє арифметичне з прайсу
+                    Кульмінація :
+                    select * from cars where year in ( select year from cars where price > (select avg(price) from cars))
+                    Виводимо рік машин які мають більшу ціну за середньоарифметичну з прайсу
+        -------------------------------------------------------------------------------------------
