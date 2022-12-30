@@ -35,6 +35,12 @@ select * from users2 join citis c on c.id = users2.cityId - приєднання
     і на її основі сформується нова таблиця ( з її колонками і стовпцями).
     select * from users2 right join citis c on c.id = users2.cityId - аналогічно , тільки права таблиця.
 
+Можна обєднувати декілька таблиць (!!! в таблицях мають бути прописані звязки!!! Інакше не обєднається)
+select * from client join department d on d.idDepartment = client.Department_idDepartment
+    join application a on client.idClient = a.Client_idClient
+        тут ми оєднуємо таблиці client та department і application та client
+
+
 Робота з обєднаними таблицями :
 
 select * from users2 join citis c on c.id = users2.cityId
