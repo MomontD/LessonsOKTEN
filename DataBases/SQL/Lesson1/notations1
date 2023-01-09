@@ -87,6 +87,9 @@ order by  - сортування
 
                     select * from users where length(name) > 4 - фільтрація корист. в кого імя більше за 4 символи
 
+                    select distinct FirstName from client - відбір по унікальному імені. Тобто, виведе тільки
+                                                           унікальні неповторюючі імена. Якщо Олена в таблиці була
+                                                           3 рази , виведе просто Олена і т.д.
                     like :
                     select * from users where name like 'kokos' - виведе всіх користувачів з іменем kokos
                                             синтаксис like 'kokos' - пошук по імені
