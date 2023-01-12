@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="доповнив завданням з зірочкою">
-      <change afterPath="$PROJECT_DIR$/DataBases/Mongodb/Lesson1_primytive_operations" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataBases/SQL/Lesson 2 (revelations)/HW" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="ok">
+      <change afterPath="$PROJECT_DIR$/DataBases/Mongodb/Lesson2_agragating_function" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/Lesson 2 (revelations)/HW" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/Lesson 2 (revelations)/notations" beforeDir="false" afterPath="$PROJECT_DIR$/DataBases/SQL/Lesson 2 (revelations)/notations" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/Lesson1/HW" beforeDir="false" afterPath="$PROJECT_DIR$/DataBases/SQL/Lesson1/HW" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/Lesson1/notations1" beforeDir="false" afterPath="$PROJECT_DIR$/DataBases/SQL/Lesson1/notations1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBases/Mongodb/Lesson1_primytive_operations" beforeDir="false" afterPath="$PROJECT_DIR$/DataBases/Mongodb/Lesson1_primytive_operations" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,27 +32,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "database.query.execution"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;mongo&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JavaScript"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JavaScript&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\glili\IdeaProjects\Lessons OKTEN\DataBases" />
@@ -131,7 +126,9 @@
       <workItem from="1672321173622" duration="5534000" />
       <workItem from="1672392175337" duration="9099000" />
       <workItem from="1673008474247" duration="7604000" />
-      <workItem from="1673281993197" duration="6484000" />
+      <workItem from="1673281993197" duration="6573000" />
+      <workItem from="1673349830278" duration="4737000" />
+      <workItem from="1673530869324" duration="6518000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -427,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672400962817</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="ok">
+      <created>1673289358896</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1673289358896</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lesson 5 (function)" />
     <MESSAGE value="lesson 4 (function)" />
     <MESSAGE value="lesson 5 (function / arguments , div , obj)" />
     <MESSAGE value="lesson 6 (methods array ,function,obj + VIEVS &amp; Examples)" />
@@ -482,6 +485,7 @@
     <MESSAGE value="Finished!!!" />
     <MESSAGE value="notations commands and algoritms SQL" />
     <MESSAGE value="доповнив завданням з зірочкою" />
-    <option name="LAST_COMMIT_MESSAGE" value="доповнив завданням з зірочкою" />
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
 </project>
