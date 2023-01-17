@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813915ff-fa45-4ddd-a612-40ccefe49d8b" name="Changes" comment="ok">
-      <change afterPath="$PROJECT_DIR$/DataBases/Mongodb/Lesson2_agragating_function" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataBases/Mongodb/Lesson3_arrays" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataBases/Mongodb/Lesson1_primytive_operations" beforeDir="false" afterPath="$PROJECT_DIR$/DataBases/Mongodb/Lesson1_primytive_operations" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,8 @@
       <workItem from="1673008474247" duration="7604000" />
       <workItem from="1673281993197" duration="6573000" />
       <workItem from="1673349830278" duration="4737000" />
-      <workItem from="1673530869324" duration="6518000" />
+      <workItem from="1673530869324" duration="7134000" />
+      <workItem from="1673605181813" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 1">
       <created>1667317401235</created>
@@ -431,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673289358896</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="ok">
+      <created>1673541116351</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1673541116351</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
