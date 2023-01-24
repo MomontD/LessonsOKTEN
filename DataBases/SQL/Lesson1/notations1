@@ -17,10 +17,13 @@
 
                 *** int - цілочисельні значення , число 2 в 32 степені
                 *** bigint - цілочисельні значення, число 2 в 64 степені
+                *** float - дробові числа
                 *** varchar - стрінгові значення , в дужках задаємо максимальну к-сть символів
                 *** not null - поле не може бути пустим
                 *** auto_increment - автоматичне заповнення поля числом від 1 до ...
                 *** primary key - пріоритетна(ключова) колонка. Система автоматично проставить not null
+                *** https://learn.microsoft.com/ru-ru/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16
+                    опис на сторінці microsoft SQL всіх типів даних
 
 3.insert into testTable - додавання елементів в таблицю testTable.
                           Команда insert into            id     name   age  gender
